@@ -1,0 +1,31 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class filereader {
+ 
+private static	String FileName="C:/Users/Harrison/Documents/GitHub/554Project1/File/bin/Hello World!.txt";
+private static	File file = new File(FileName);
+
+
+
+@Test
+public void testScanMessage() throws FileNotFoundException {	  
+   assertEquals("Hello Harrison!",RnW.ScanFile(file));}
+@Test
+public void testStreamMessage() throws IOException {
+  assertEquals("72",RnW.StreamFile(file));
+}
+
+@Test
+public void testReadMessage() throws IOException {
+	  assertEquals("Hello Harrison!",RnW.ReadFile(file));
+	}
+
+
+	
+}

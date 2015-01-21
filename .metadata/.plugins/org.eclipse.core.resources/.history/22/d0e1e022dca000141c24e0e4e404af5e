@@ -1,0 +1,19 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class filereader {
+ 
+private static	String FileName="C:/Users/Harrison/Documents/GitHub/554Project1/File/bin/Hello World!.txt";
+private static	File file = new File(FileName);
+
+
+
+@Test
+public void testPrintMessage() throws FileNotFoundException {	  
+   assertEquals("Hello",RnW.ScanFile(file));}
+
+
+	
+}

@@ -1,0 +1,51 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class RnW {
+	
+	public static String ScanFile(File File) throws FileNotFoundException  {
+		 @SuppressWarnings("resource")
+		 Scanner sc = new Scanner(File);
+		 String scan = sc.nextLine();
+		 System.out.println("Scan: " + scan);
+		 return scan;
+	}
+	
+	public static String StreamFile(File File) throws IOException {
+		 FileInputStream inputStream = new FileInputStream(File);
+			try {
+				String result = ""; 
+				int content;
+				while ((content = inputStream.read()) != -1) {
+					result = result + (char)content;
+				}
+				System.out.println(result);
+				return result;
+				}
+				finally {
+						if (inputStream != null)
+							inputStream.close();
+				}
+	}
+	
+	public static String ReadFile(File File) throws IOException {
+		BufferedReader br = new BufferedReader( new FileReader(File.getPath()));
+		try {
+	        String line = br.readLine();
+	        System.out.println("read: " + line);
+	        return line;}
+	    finally {
+	        br.close();
+	    }
+		
+	}
+	
+	
+	
+
+}

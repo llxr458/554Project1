@@ -1,0 +1,16 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class RnW {
+	
+	public static String ScanFile(File File) throws FileNotFoundException  {
+		 @SuppressWarnings("resource")
+		 Scanner sc = new Scanner(File);
+		 String scan = sc.next();
+		 return scan;
+	}
+	
+
+}

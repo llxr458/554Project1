@@ -1,0 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class filereader {
+ 
+private	String FileName="This PC:Document/GitHub/554Project1/bin/Hello Worlds!.txt";
+private	File file = new File(FileName);
+
+public void main() throws FileNotFoundException {
+	System.out.println(RnW.ScanFile(file));
+	
+}
+	
+}
